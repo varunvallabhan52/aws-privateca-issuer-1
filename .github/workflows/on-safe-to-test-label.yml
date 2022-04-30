@@ -44,7 +44,7 @@ jobs:
           mode: start
           github-token: GithubToken-dev-vvvallab-us-east-1
           ec2-image-id: ${{ env.AMI }}
-          ec2-instance-type: t3.medium
+          ec2-instance-type: c3.xlarge
           subnet-id: ${{ env.SUBNET_ID }}
           security-group-id: ${{ env.SG_ID }}
           iam-role-name: K8sPluginInstanceProfile-dev-vvvallab-us-east-1
