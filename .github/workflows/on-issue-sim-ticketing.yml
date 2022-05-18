@@ -42,7 +42,7 @@ jobs:
       
       - uses: varunvallabhan52/sqs-action@v1.0
         with:
-          sqs-url: https://sqs.us-east-1.amazonaws.com/830303460469/TicketingStack-dev-vvvallab-us-ea-GithubSimTicketingSQSdevvvvallabu-fcOcaJ6cXOXg
+          sqs-url: https://sqs.us-east-1.amazonaws.com/830303460469/TicketingStack-dev-vvvallab-us-ea-GithubSimTicketingSQSdevvvvallabu-SKcRXqGbwDYc
           message: ${{ toJSON(github) }}
       
       - name: Fetch events
