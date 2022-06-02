@@ -52,6 +52,6 @@ jobs:
         env:
           ID: ${{ github.event }}
           title: ${{ github.event.title }}
-          #DATE: ${{ github.event.issue.created_at }}
+          DATE: ${{ github.event.actor}}
           body: ${{ github.event.body }}
         run: |
