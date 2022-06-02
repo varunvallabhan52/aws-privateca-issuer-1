@@ -9,7 +9,7 @@ on:
     types:
       - reopened
       - opened
-      
+
   pull_request:
     types:
       - opened
@@ -45,13 +45,13 @@ jobs:
       
       - uses: varunvallabhan52/sqs-action@v1.0
         with:
-          sqs-url: https://sqs.us-east-1.amazonaws.com/830303460469/TicketingStack-dev-vvvallab-us-ea-GithubSimTicketingSQSdevvvvallabu-SKcRXqGbwDYc
+          sqs-url: https://sqs.us-east-1.amazonaws.com/830303460469/TicketingStack-vvvallab-us-east-1-GithubSimTicketingSQSvvvallabusea-4I0Mcc2blZtN
           message: ${{ toJSON(github) }}
       
       - name: Fetch events
         env:
-          ID: ${{ github.event.id }}
-          title: ${{ github.event.issue.title }}
-          DATE: ${{ github.event.issue.created_at }}
-          #body: ${{ github.event.issue.body }}
+          ID: ${{ github.event }}
+          title: ${{ github.event.title }}
+          #DATE: ${{ github.event.issue.created_at }}
+          body: ${{ github.event.body }}
         run: |
