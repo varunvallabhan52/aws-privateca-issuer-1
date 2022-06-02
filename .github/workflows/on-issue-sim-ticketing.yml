@@ -35,7 +35,7 @@ jobs:
       - name: Setup AWS Credentials
         uses: aws-actions/configure-aws-credentials@master
         with:
-          role-to-assume: arn:aws:iam::830303460469:role/GithubActionsSQSRole-dev-vvvallab-us-east-1
+          role-to-assume: arn:aws:iam::830303460469:role/GithubActionsSQSRole-vvvallab-us-east-1
           aws-region: us-east-1
      # - name: Dump GitHub context
        # env:
